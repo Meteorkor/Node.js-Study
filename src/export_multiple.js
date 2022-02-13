@@ -25,8 +25,22 @@ const GetSum = (a, b) => {
 }
 */
 
+function oddOrEven(array) {
+  var sum = 0;
+  array.forEach((item, index, array) => {
+    sum += item;
+  });
+
+  return sum % 2 == 0 ? "even" : "odd";
+}
+
+// function oddOrEven(arr) {
+//   return arr.reduce((a,b)=>a+b,0) % 2 ? 'odd' : 'even';
+// }
+
 
 module.exports = {
   greet,
-  getSum
+  getSum,
+  oddOrEven
 }
