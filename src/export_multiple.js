@@ -37,10 +37,40 @@ function oddOrEven(array) {
 // function oddOrEven(arr) {
 //   return arr.reduce((a,b)=>a+b,0) % 2 ? 'odd' : 'even';
 // }
+function getCount(str) {
+  var vowelsCount = 0;
 
+  var vowrls = ['a', 'e', 'i', 'o', 'u'];
+
+  `${str}`.split('').forEach((item) => {
+    vowrls.filter((value) => {
+      vowelsCount += (item == value) ? 1 : 0;
+    });
+  });
+  return vowelsCount;
+}
+// function getCount(str) {
+//   return (str.match(/[aeiou]/ig)||[]).length;
+// }
+
+function validatePIN(pin) {
+  var matchedCnt = (pin.match(/[0-9]/ig) || []).length;
+  if (pin.length != matchedCnt) {
+    return false;
+  }
+
+  return matchedCnt == 4 || matchedCnt == 6;
+  //return true or false
+}
+// function validatePIN(pin) {
+//   return /^(\d{4}|\d{6})$/.test(pin)
+// }
+// var hasOnlyNumbers = pin.match(/^\d+$/);
 
 module.exports = {
   greet,
   getSum,
-  oddOrEven
+  oddOrEven,
+  getCount,
+  validatePIN
 }
