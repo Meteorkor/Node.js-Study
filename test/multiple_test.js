@@ -52,5 +52,10 @@ describe('Array', function () {
       assert.strictEqual(func.validatePIN("123456"), true, "Wrong output for '123456'");
       assert.strictEqual(func.validatePIN("090909"), true, "Wrong output for '090909'");
     });
+
+    it("Tests example test cases", () => {
+      assert.strictEqual(func.sumStr("4","5"), "9");
+      assert.strictEqual(func.sumStr("34","5"), "39");
+    });
   });
 });

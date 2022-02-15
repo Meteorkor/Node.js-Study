@@ -67,6 +67,20 @@ function validatePIN(pin) {
 // }
 // var hasOnlyNumbers = pin.match(/^\d+$/);
 
+function sumStr(a, b) {
+  return `${Number(a) + Number(b)}`
+}
+// function sumStr(a,b) {
+//   return String(Number(a)+Number(b));
+// }
+// function sumStr(a,b) {
+//   return (+a+ +b)+''  
+// }
+
+
+
+
+
 module.exports = {
   greet,
   getSum,
