@@ -7,7 +7,7 @@ describe('Array', function () {
       assert.strictEqual(func.getSum(0, -1), -1);
       assert.strictEqual(func.getSum(0, 1), 1);
     });
-    
+
     it('greet', function () {
       assert.strictEqual(func.greet("Ryan"), "Hello, Ryan how are you doing today?");
       assert.strictEqual(func.greet("Shingles"), "Hello, Shingles how are you doing today?");
@@ -20,7 +20,7 @@ describe('Array', function () {
       assert.strictEqual(func.oddOrEven([0, 1, 5]), 'even');
       assert.strictEqual(func.oddOrEven([0, 1, 3]), 'even');
       assert.strictEqual(func.oddOrEven([1023, 1, 2]), 'even');
-      
+
     });
 
     it('getCount', function () {
@@ -54,8 +54,16 @@ describe('Array', function () {
     });
 
     it("Tests example test cases", () => {
-      assert.strictEqual(func.sumStr("4","5"), "9");
-      assert.strictEqual(func.sumStr("34","5"), "39");
+      assert.strictEqual(func.sumStr("4", "5"), "9");
+      assert.strictEqual(func.sumStr("34", "5"), "39");
     });
+
+    it("should work for the examples", function () {
+      assert.strictEqual(func.stringToNumber("1234"), 1234)
+      assert.strictEqual(func.stringToNumber("605"), 605)
+      assert.strictEqual(func.stringToNumber("1405"), 1405)
+      assert.strictEqual(func.stringToNumber("-7"), -7)
+    });
+
   });
 });

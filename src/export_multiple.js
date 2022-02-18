@@ -77,7 +77,9 @@ function sumStr(a, b) {
 //   return (+a+ +b)+''  
 // }
 
-
+var stringToNumber = function(str){
+  return Number(str);//parseInt
+}
 
 
 
@@ -86,5 +88,7 @@ module.exports = {
   getSum,
   oddOrEven,
   getCount,
-  validatePIN
+  validatePIN,
+  sumStr,
+  stringToNumber
 }
