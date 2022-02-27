@@ -65,5 +65,12 @@ describe('Array', function () {
       assert.strictEqual(func.stringToNumber("-7"), -7)
     });
 
+    it("Should return \"11\"", function () {
+      assert.strictEqual(func.addBinary(1, 2), "11");
+    });
+
+    it("Testing for fixed tests", () => {
+      assert.strictEqual(func.highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"), "42 -9");   
+    });
   });
 });

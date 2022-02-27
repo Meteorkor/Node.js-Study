@@ -81,6 +81,20 @@ var stringToNumber = function(str){
   return Number(str);//parseInt
 }
 
+function addBinary(a,b) {
+  return (a + b).toString(2)
+}
+
+function highAndLow(numbers){
+  var numberArr = numbers.split(" ").map(Number)
+  var maxNumber = Math.max.apply(null, numberArr)
+  // var maxNumber = Math.max(...numberArr)
+  var minNumber = Math.min.apply(null, numberArr)
+  // var minNumber = Math.min(...numberArr)
+  
+
+  return `${maxNumber} ${minNumber}`;
+}
 
 
 module.exports = {
@@ -90,5 +104,7 @@ module.exports = {
   getCount,
   validatePIN,
   sumStr,
-  stringToNumber
+  stringToNumber,
+  addBinary,
+  highAndLow
 }
