@@ -72,5 +72,12 @@ describe('Array', function () {
     it("Testing for fixed tests", () => {
       assert.strictEqual(func.highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"), "42 -9");   
     });
+
+    it("Build a pile of Cubes", () => {
+      assert.strictEqual(func.findNb(4183059834009), 2022)
+      assert.strictEqual(func.findNb(24723578342962), -1)
+      assert.strictEqual(func.findNb(135440716410000), 4824)
+      assert.strictEqual(func.findNb(40539911473216), 3568)
+    });
   });
 });

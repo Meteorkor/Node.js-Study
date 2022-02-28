@@ -77,24 +77,46 @@ function sumStr(a, b) {
 //   return (+a+ +b)+''  
 // }
 
-var stringToNumber = function(str){
+var stringToNumber = function (str) {
   return Number(str);//parseInt
 }
 
-function addBinary(a,b) {
+function addBinary(a, b) {
   return (a + b).toString(2)
 }
 
-function highAndLow(numbers){
+function highAndLow(numbers) {
   var numberArr = numbers.split(" ").map(Number)
   var maxNumber = Math.max.apply(null, numberArr)
   // var maxNumber = Math.max(...numberArr)
   var minNumber = Math.min.apply(null, numberArr)
   // var minNumber = Math.min(...numberArr)
-  
+
 
   return `${maxNumber} ${minNumber}`;
 }
+
+function findNb(m) {
+  var max = 10000000;
+  var sum = 0;
+  for (let i = 1; i < max; i++) {
+    // sum += i * i * i;
+    sum += Math.pow(i, 3);
+    if (m < sum) {
+      return -1;
+    } else if (m == sum) {
+      return i;
+    }
+  }
+  return (-1);
+}
+
+// function findNb(m) {
+//   var n = 0
+//   while (m > 0) m -= ++n**3
+//   return m ? -1 : n
+// }
+
 
 
 module.exports = {
@@ -106,5 +128,6 @@ module.exports = {
   sumStr,
   stringToNumber,
   addBinary,
-  highAndLow
+  highAndLow,
+  findNb
 }
