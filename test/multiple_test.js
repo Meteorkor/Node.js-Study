@@ -79,5 +79,12 @@ describe('Array', function () {
       assert.strictEqual(func.findNb(135440716410000), 4824)
       assert.strictEqual(func.findNb(40539911473216), 3568)
     });
+
+    it("Testing for fixed tests", () => {
+      assert.strictEqual(func.busStopNumber([[10,0],[3,5],[5,8]]),5);
+      assert.strictEqual(func.busStopNumber([[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]]),17);
+      assert.strictEqual(func.busStopNumber([[3,0],[9,1],[4,8],[12,2],[6,1],[7,8]]),21);
+      assert.strictEqual(func.busStopNumber([[0,0]]),0);
+    });
   });
 });

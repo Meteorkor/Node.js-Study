@@ -117,6 +117,16 @@ function findNb(m) {
 //   return m ? -1 : n
 // }
 
+var busStopNumber = function (busStops) {
+  // var remainNumber = 0;
+  // busStops.forEach((item, index, array) => {
+  //   remainNumber += item[0];
+  //   remainNumber -= item[1];
+  // })
+  // return remainNumber;
+
+  return busStops.reduce((s, n) => s + n[0] - n[1], 0);
+}
 
 
 module.exports = {
@@ -129,5 +139,6 @@ module.exports = {
   stringToNumber,
   addBinary,
   highAndLow,
-  findNb
+  findNb,
+  busStopNumber
 }
