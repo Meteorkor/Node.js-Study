@@ -128,6 +128,9 @@ var busStopNumber = function (busStops) {
   return busStops.reduce((s, n) => s + n[0] - n[1], 0);
 }
 
+function squareSum(numbers) {
+  return numbers.reduce((s, n) => s + Math.pow(n, 2), 0);
+}
 
 module.exports = {
   greet,
@@ -140,5 +143,6 @@ module.exports = {
   addBinary,
   highAndLow,
   findNb,
-  busStopNumber
+  busStopNumber,
+  squareSum
 }

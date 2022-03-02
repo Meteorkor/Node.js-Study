@@ -70,7 +70,7 @@ describe('Array', function () {
     });
 
     it("Testing for fixed tests", () => {
-      assert.strictEqual(func.highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"), "42 -9");   
+      assert.strictEqual(func.highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"), "42 -9");
     });
 
     it("Build a pile of Cubes", () => {
@@ -81,10 +81,20 @@ describe('Array', function () {
     });
 
     it("Testing for fixed tests", () => {
-      assert.strictEqual(func.busStopNumber([[10,0],[3,5],[5,8]]),5);
-      assert.strictEqual(func.busStopNumber([[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]]),17);
-      assert.strictEqual(func.busStopNumber([[3,0],[9,1],[4,8],[12,2],[6,1],[7,8]]),21);
-      assert.strictEqual(func.busStopNumber([[0,0]]),0);
+      assert.strictEqual(func.busStopNumber([[10, 0], [3, 5], [5, 8]]), 5);
+      assert.strictEqual(func.busStopNumber([[3, 0], [9, 1], [4, 10], [12, 2], [6, 1], [7, 10]]), 17);
+      assert.strictEqual(func.busStopNumber([[3, 0], [9, 1], [4, 8], [12, 2], [6, 1], [7, 8]]), 21);
+      assert.strictEqual(func.busStopNumber([[0, 0]]), 0);
     });
+
+    it("test", () => {
+      assert.strictEqual(func.squareSum([1, 2]), 5)
+      assert.strictEqual(func.squareSum([0, 3, 4, 5]), 50)
+      assert.strictEqual(func.squareSum([]), 0)
+    });
+
+
+
+
   });
 });
