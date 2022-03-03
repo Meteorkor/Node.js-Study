@@ -93,8 +93,11 @@ describe('Array', function () {
       assert.strictEqual(func.squareSum([]), 0)
     });
 
-
-
-
+    it("test", () => {
+      assert.strictEqual(func.seriesSum(1), "1.00")
+      assert.strictEqual(func.seriesSum(2), "1.25")
+      assert.strictEqual(func.seriesSum(3), "1.39")
+      assert.strictEqual(func.seriesSum(4), "1.49")
+    });
   });
 });

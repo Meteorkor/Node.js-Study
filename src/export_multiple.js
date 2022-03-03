@@ -132,6 +132,14 @@ function squareSum(numbers) {
   return numbers.reduce((s, n) => s + Math.pow(n, 2), 0);
 }
 
+function seriesSum(n) {
+  var sum = 0;
+  for (let i = 0; i < n; i++) {
+    sum += 1 / (1 + 3 * i);
+  }
+  return sum.toFixed(2);
+}
+
 module.exports = {
   greet,
   getSum,
@@ -144,5 +152,6 @@ module.exports = {
   highAndLow,
   findNb,
   busStopNumber,
-  squareSum
+  squareSum,
+  seriesSum
 }
