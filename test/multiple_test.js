@@ -99,5 +99,18 @@ describe('Array', function () {
       assert.strictEqual(func.seriesSum(3), "1.39")
       assert.strictEqual(func.seriesSum(4), "1.49")
     });
+
+    it("opposite test", () => {
+      assert.strictEqual(func.opposite(1), -1,)
+    });
+
+    it("Testing for fixed tests", () => {
+      assert.deepEqual(func.friend(["Ryan", "Kieran", "Mark"]), ["Ryan", "Mark"])
+      assert.deepEqual(func.friend(["Ryan", "Jimmy", "123", "4", "Cool Man"]), ["Ryan"])
+      assert.deepEqual(func.friend(["Jimm", "Cari", "aret", "truehdnviegkwgvke", "sixtyiscooooool"]), ["Jimm", "Cari", "aret"])
+      assert.deepEqual(func.friend(["Love", "Your", "Face", "1"]), ["Love", "Your", "Face"])
+    })
+
+
   });
 });

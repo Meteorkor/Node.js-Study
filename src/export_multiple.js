@@ -140,6 +140,14 @@ function seriesSum(n) {
   return sum.toFixed(2);
 }
 
+function opposite(number) {
+  return -(number)
+}
+
+function friend(friends) {
+  return friends.filter(word => word.length == 4);
+}
+
 module.exports = {
   greet,
   getSum,
@@ -153,5 +161,7 @@ module.exports = {
   findNb,
   busStopNumber,
   squareSum,
-  seriesSum
+  seriesSum,
+  opposite,
+  friend
 }
