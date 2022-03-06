@@ -148,6 +148,32 @@ function friend(friends) {
   return friends.filter(word => word.length == 4);
 }
 
+function past(h, m, s) {
+  return (h * 60 * 60 + m * 60 + s) * 1000;
+}
+
+function expandedForm(num) {
+  var numText = num + '';
+  var result = "";
+
+  for (let i = 0; i < numText.length; i++) {
+    if (numText.charAt(i) != '0') {
+      if (i != 0) {
+        result += ' + ';
+      }
+      result += numText.charAt(i);
+      result += "0".repeat(numText.length - i - 1);
+    }
+  }
+
+  return result;
+  // return String(num)
+  // .split("")
+  // .map((num, index, arr) => num + "0".repeat(arr.length - index -1 ))
+  // .filter((num) => Number(num) != 0)
+  // .join(" + ")
+}
+
 module.exports = {
   greet,
   getSum,
@@ -163,5 +189,7 @@ module.exports = {
   squareSum,
   seriesSum,
   opposite,
-  friend
+  friend,
+  past,
+  expandedForm
 }

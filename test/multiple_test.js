@@ -109,7 +109,21 @@ describe('Array', function () {
       assert.deepEqual(func.friend(["Ryan", "Jimmy", "123", "4", "Cool Man"]), ["Ryan"])
       assert.deepEqual(func.friend(["Jimm", "Cari", "aret", "truehdnviegkwgvke", "sixtyiscooooool"]), ["Jimm", "Cari", "aret"])
       assert.deepEqual(func.friend(["Love", "Your", "Face", "1"]), ["Love", "Your", "Face"])
-    })
+    });
+
+    it("Beginner Series #2 Clock", () => {
+      assert.strictEqual(func.past(0, 1, 1), 61000)
+      assert.strictEqual(func.past(1, 1, 1), 3661000)
+      assert.strictEqual(func.past(0, 0, 0), 0)
+      assert.strictEqual(func.past(1, 0, 1), 3601000)
+      assert.strictEqual(func.past(1, 0, 0), 3600000)
+    });
+
+    it("Write Number in Expanded Form", () => {
+      assert.strictEqual(func.expandedForm(12), '10 + 2');
+      assert.strictEqual(func.expandedForm(42), '40 + 2');
+      assert.strictEqual(func.expandedForm(70304), '70000 + 300 + 4');
+    });
 
 
   });
