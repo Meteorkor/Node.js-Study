@@ -125,6 +125,13 @@ describe('Array', function () {
       assert.strictEqual(func.expandedForm(70304), '70000 + 300 + 4');
     });
 
+    it("Testing for fixed tests", () => {
+      assert.strictEqual(func.reverseWords('The quick brown fox jumps over the lazy dog.'), 'ehT kciuq nworb xof spmuj revo eht yzal .god');
+      assert.strictEqual(func.reverseWords('apple'), 'elppa');
+      assert.strictEqual(func.reverseWords('a b c d'), 'a b c d');
+      assert.strictEqual(func.reverseWords('double  spaced  words'), 'elbuod  decaps  sdrow');
+    });
+
 
   });
 });

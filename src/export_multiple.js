@@ -174,6 +174,10 @@ function expandedForm(num) {
   // .join(" + ")
 }
 
+function reverseWords(str) {
+  return str.split(" ").map((tex) => tex.split("").reverse().join("")).join(" ");
+}
+
 module.exports = {
   greet,
   getSum,
@@ -191,5 +195,6 @@ module.exports = {
   opposite,
   friend,
   past,
-  expandedForm
+  expandedForm,
+  reverseWords
 }
